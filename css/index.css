@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root{
+    --bg-color1: rgb(20, 24, 74);
+    --bg-color2: rgb(227, 60, 0);
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+   /* Estilos barra (thumb) de scroll */
+::-webkit-scrollbar-thumb {
+    background: #00000096;
+    border-radius: 4px;
+}
+  
+::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+  
+   /* Estilos track de scroll */
+::-webkit-scrollbar-track {
+    background: #fbfbfb1f;
+    border-radius: 4px;
+}
+  
+::-webkit-scrollbar-track:hover, 
+::-webkit-scrollbar-track:active {
+    background: #d4d4d43d;
+}
+
+
+a{
+    text-decoration: none !important;
+    color: unset;
+}
+
+.app{
+    
+    overflow: hidden;
+    position: relative;
+}
+
+.main{
+    position: relative;
+}
+
+#section1{
+    position: relative;
+    background-image: linear-gradient(to right, var(--bg-color1) 50%, var(--bg-color2) 50%);
+}
+/* Pinture */
+.img-bg1{
+    object-fit: cover;
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 2.5vw) ;
+    left: -2.5vw;
+    top: -5%;
+    filter:invert(.95);
+}
+
+/* Volcano */
+.img-bg2{
+    object-fit: contain;
+    position: absolute;
+    height: 90%;
+    width: 90% ;
+    right: -15%;
+    bottom: -15%;
+}
+
+/* Astronaut */
+.img-bg3{
+    object-fit: contain;
+    position: absolute;
+    height: 90%;
+    width: 90% ;
+    left: -10%;
+    bottom: 35%;
+}
+
+@keyframes bg-blur {
+    from{
+        filter: blur(10px);
+    }
+    to{
+        filter: blur(0px);
+    }
+}
+
+@keyframes right-to-in {
+    from{
+        right: -100%;
+    }
+}
+
+@keyframes top-to-in {
+    from{
+        top: -100%;
+    }
+}
+
+@keyframes left-to-in {
+    from{
+        left: -100%;
+    }
+}
+
+@keyframes scale-to-in {
+    from{
+        transform: scale(1,0);
+    }
+}
+
+.left-entry-animation{
+    animation: left-to-in .75s forwards;
+}
+
+.right-entry-animation{
+    animation: right-to-in .75s forwards;
+}
+
+.top-entry-animation{
+    animation: top-to-in .75s forwards;
+}
+
+.scale-entry-animation{
+    animation: scale-to-in .75s forwards;
+}
+
+#astronaut-section, 
+#volcan-section{
+    contain: content;
+    background-color: rgba(0, 0, 0, 0.427);
+    color: rgba(0, 0, 0, 0);
+}
+
+#astronaut-section div h2, 
+#volcan-section div h2{
+    transition: color .3s, border .25s;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0px 0px 12px white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bi-arrow-left, .bi-arrow-right{
+    position: relative;
+    width: 24px;
+    height: 24px;
+    transition: transform .25s;
+}
+
+#astronaut-section div h2:hover, 
+#volcan-section div h2:hover{
+    
+    border-bottom: 1px solid white;
+}
+
+#volcan-section div h2:hover a svg{
+    transform: translateX(10px);
+}
+
+#astronaut-section div h2:hover a svg{
+    transform: translateX(-10px);
+}
+
+
+#astronaut-section:hover img{
+    transition: transform .5s ;
+    transform: scale(1.1);
+}
+#astronaut-section:hover{
+    background-color: rgba(20, 24, 74, 0);
+    color: black;
+}
+#volcan-section:hover{
+    background-color: rgba(227, 61, 0, 0);
+    color: black
+}
+
+#volcan-section:hover img{
+    transition: transform .5s ;
+    transform: scale(1.1);
+}
+
+
+#section2{
+    padding-top: 54px !important;
+    background: var(--bg-color2) url('../img/mountain1.png');
+    background-repeat: no-repeat;
+    background-position: 0vh 0vw;
+    background-size: cover;
+    /* background-blend-mode: multiply; */
+}
+
+#section2 .card img{
+    object-fit: cover;
+    height: 200px;
+}
+
+#section3{
+    position: relative;
+    padding-top: 54px !important;
+    background: var(--bg-color1) url('../img/nebulosa1.png');
+    background-repeat: no-repeat;
+    background-position: 0vh -20vw;
+    background-size: cover;
+    background-blend-mode:hard-light;
+    /* contain: content; */
+}
+
+#section3>img{
+    object-fit: fill;
+    object-position: center;
+}
+
+.card{
+    box-shadow: 0px 4px 8px black;
+}
+
+.accordion-button:not(.collapsed)::after{
+    filter: contrast(.2);
+}
+
+@media (max-width:765px) {
+    #section1{
+        flex-direction: column;
+        background-image: linear-gradient(to bottom, var(--bg-color1) 50%, var(--bg-color2) 50%);
+    }
+}
+
+@media (max-width:375px) {
+    #section1 div>h2>a{
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar fixed-top" style="background-color: rgba(255, 255, 255, 0) !important;">
+
+      <!-- CONTAINER-FLUID -->
+      <div class="container-fluid">
+
+        <!-- HOME LINK -->
+        <a class="navbar-brand text-white" href="/" style="text-shadow: 2px 2px black;">Home</a>
+
+        <!-- MENU TOGGLE-BUTTON -->
+        <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation" style="background-color: white">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- MENU OFFCANVAS-->
+        <div class="offcanvas offcanvas-end bg-dark " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+          <!-- HEADER MENU -->
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">Be POWER</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <!-- BODY MENU-->
+          <div class="offcanvas-body">
+
+            <!-- MENU LINKS -->
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+              <li class="nav-item" data-bs-dismiss="offcanvas" aria-label="Close">
+                <a class="nav-link active text-white" type="button" data-bs-target="#carouselMain" data-bs-slide-to="0">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contact</a>
+              </li>
+
+              <!-- DROPDOWN -->
+              <li class="nav-item dropdown">
+
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Be
+                </a>
+
+                <ul class="dropdown-menu">
+
+                  <li data-bs-dismiss="offcanvas" aria-label="Close">
+                    <a class="dropdown-item" href="#section2" type="button" data-bs-target="#carouselMain" data-bs-slide-to="1">Montaineer</a>
+                  </li>
+
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+
+                  <li data-bs-dismiss="offcanvas" aria-label="Close">
+                    <a class="dropdown-item" href="#section3" type="button" data-bs-target="#carouselMain" data-bs-slide-to="2">Astrounaut</a>
+                  </li>
+
+                </ul>
+
+              </li>
+              <!-- END DROPDOWN -->
+
+            </ul>
+            <!-- END MENU LINKS -->
+
+          </div>
+          <!-- END BODY MENU -->
+
+        </div>
+        <!-- END OFFCANVAS -->
+
+      </div>
+      <!-- END CONTAINER-FLUID -->
+
+    </nav>
+    <!-- END NAVBAR -->
+
+    <!-- CAROUSEL: ALL VIEWS -->
+    <div class="app carousel slide" id="carouselMain">
+        
+        <!-- CAROUSEL INNER (3 ITEMS)-->
+        <main class="main vh-100 carousel-inner">
+
+          <!-- CAROUSEL ITEM 1: PRINCIPAL VIEW-->
+          <div class="carousel-item active d-flex h-100 w-100" id="section1">
+
+            <!-- WHITE PINTURE BG -->
+            <img src="./img/png2.png" class="img-bg1 scale-entry-animation" alt="pinture">
+
+            <!-- ASTRONAUT 50% -->
+            <div class="col h-100 d-flex" id="astronaut-section">
+
+              <!-- ASTRONAUT PNG TRANSPARENT BG -->
+              <img src="./img/png11.png" class="img-bg3 left-entry-animation z-0" alt="astronaut">
+
+              <!-- CALL TO ACCTION -->
+              <div class="d-flex flex-column justify-content-around align-items-center h-100 w-100 z-3">
+
+                <p></p>
+                <p></p>
+
+                <h2 class="px-3 py-1">
+
+                  <!-- CAROUSEL PREVIOUS BUTTON: GO TO ASTRONAUT VIEW -->
+                  <a href="#section3" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left " viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>
+                    BE ASTRONAUT 
+                  </a>
+
+                </h2>
+
+              </div>
+              <!-- END CALL TO ACTION -->
+
+            </div>
+            <!-- END ASTRONAUT 50% -->
+
+            <!-- MONTAINEER 50% -->
+            <div class="col h-100 d-flex" id="volcan-section">
+
+              <!-- MOUNTAIN TRANSPARENT BG -->
+              <img src="./img/png6.png" class="img-bg2 right-entry-animation" alt="volcan">
+
+              <!-- CALL TO ACTION -->
+              <div class="d-flex flex-column justify-content-around align-items-center h-100 w-100 z-3">
+                
+                <h2  class="px-3 py-1">
+
+                  <!-- CAROUSEL NEXT BUTTON: GO TO MOUNTAINEER VIEW -->
+                  <a href="#section2" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+                    BE MOUNTAINEER 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                  </a>
+
+                </h2>
+
+                <p></p>
+                <p></p>
+
+              </div>
+              <!-- END CALL TO ACTION -->
+
+            </div>
+            <!-- END MONTAINEER 50% -->
+
+          </div>
+          <!-- END OF CAROUSEL ITEM 1: PRINCIPAL VIEW -->
+
+          <!-- CAROUSEL ITEM 2: MONTAINER VIEW -->
+          <div class="carousel-item h-100 w-100 p-4 overflow-auto " id="section2">
+
+            <div class="container h-100 ">
+              <h2 class="text-white mb-4">BE MONTAINER</h2>
+
+              <!-- GROUP CARD (3): INFO -->
+              <div class="card-group gap-5">
+
+                <!-- CARD 1-->
+                <div class="card border border-5 rounded-0 h-75">
+                  <img src="./img/mountain2.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Hacia la cima</h5>
+                    <p class="card-text">Si has decidido ser montañista, te espera un emocionante viaje lleno de desafíos, aventuras y vistas impresionantes. Escalar una montaña es una de las experiencias más gratificantes que puedes tener, pero también es un deporte extremo que requiere preparación y habilidad.</p>
+                  </div>
+                </div>
+
+                <!-- CARD 2-->
+                <div class="card border border-5 rounded-0 h-75">
+                  <img src="./img/mountain2.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">El cuerpo a prueba</h5>
+                    <p class="card-text text-center">Como montañista, tendrás la oportunidad de explorar algunos de los lugares más hermosos y remotos del mundo, desde las cumbres de los Alpes hasta las montañas más altas del Himalaya. En cada ascenso, tendrás que enfrentar retos como cambios de clima, terrenos difíciles y alturas extremas, lo que requerirá que estés en buena forma física y mental.</p>
+                  </div>
+                </div>
+
+                <!-- CARD 3-->
+                <div class="card border border-5 rounded-0 h-75">
+                  <img src="./img/mountain2.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-end">Satisfacción y naturaleza</h5>
+                    <p class="card-text text-end">Pero los beneficios de ser montañista van más allá de la emoción del ascenso. Escalar una montaña también puede ser una forma de conectarte con la naturaleza, superar tus límites y descubrir un sentido de logro y satisfacción que no encontrarás en ninguna otra parte.</p>
+                  </div>
+                </div>
+
+              </div>
+              <!-- END GROUP CARD -->
+
+              <!-- SHORT-MESSAGE-BLOCK -->
+              <p class="text-white text-center my-5 fw-bold border py-2 px-2" style="box-shadow:0px 4px 8px black; text-shadow: 2px 2px black;">
+                Si estás listo para enfrentar el desafío y experimentar lo que significa ser un verdadero montañista, ¡adelante! ¡Las montañas te esperan!
+              </p>
+
+              <!-- ACCORDION: FAQ -->
+              <div class="accordion" id="accordionPanelsStayOpenExample">
+
+                <!-- ITEM 1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                      1. ¿Qué se necesita para ser montañista?
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                      Para ser un buen montañista, se necesita una buena condición física y habilidades técnicas para manejar los equipos necesarios para escalar. Además, se recomienda tener experiencia previa en senderismo y escalada en roca. También es importante tener un conocimiento sólido de la seguridad en la montaña y estar preparado para cualquier emergencia.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed  bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                      2. ¿Cuáles son los riesgos de escalar una montaña?
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      Escalar una montaña puede ser peligroso debido a la altura, la exposición a los elementos y la posibilidad de lesiones en terrenos irregulares. Los montañistas también pueden enfrentar riesgos de avalanchas, caídas de rocas y otros peligros naturales. Es importante tener un plan de seguridad y seguir las precauciones necesarias para minimizar los riesgos.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed  bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                      3. ¿Qué beneficios hay en ser montañista?
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      Ser montañista puede ser una experiencia emocionante y gratificante que te desafía física y mentalmente. Además, te permite conectarte con la naturaleza y experimentar paisajes impresionantes que solo se pueden encontrar en la montaña. También puede ser una oportunidad para conocer a otros montañistas y desarrollar habilidades de trabajo en equipo y liderazgo.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- END OF ACCORDION -->
+
+              <br><br><br>
+
+            </div>
+
+            <!-- CARRUSEL PREVIOUS BUTTON: RETURN TO PRINCIPAL VIEW -->
+            <button class="carousel-control-prev position-fixed" type="button" data-bs-target="#carouselMain" data-bs-slide="prev" style="width: 7.5% !important;" >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+          </div>
+          <!-- END OF ITEM 2: MONTAINER VIEW -->
+
+          <!-- CAROUSEL ITEM 3: BE ASTRONAUT -->
+          <div class="carousel-item h-100 w-100 p-4 overflow-auto" id="section3">
+
+            <div class="container h-100 ">
+
+                <h2 class="text-white mb-4">BE ASTRONAUT</h2>
+
+                <!-- GROUP CARD (3) -->
+                <div class="card-group gap-5">
+
+                  <!-- CARD 1 -->
+                  <div class="card border border-5 rounded-0">
+                    <img src="./img/universe-image-to-card.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Hacia el infinito</h5>
+                      <p class="card-text">Si has decidido ser astronauta, te espera un viaje al espacio lleno de maravillas y descubrimientos increíbles. Desde la Tierra, el universo parece infinito, pero una vez que te adentres en él, descubrirás que hay mucho más por explorar.</p>
+                    </div>
+                  </div>
+
+                  <!-- CARD 2 -->
+                  <div class="card border border-5 rounded-0">
+                    <img src="./img/universe-image-to-card.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">En busca de respuestas</h5>
+                      <p class="card-text text-center">Como astronauta, tendrás la oportunidad de vivir experiencias únicas, como flotar en gravedad cero, observar la Tierra desde el espacio, y ser parte de misiones que buscan responder preguntas importantes sobre nuestro universo.</p>
+                    </div>
+                  </div>
+
+                  <!-- CARD 3 -->
+                  <div class="card border border-5 rounded-0">
+                    <img src="./img/universe-image-to-card.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title text-end">Dedicación y esfuerzo</h5>
+                      <p class="card-text text-end">Pero no te confundas, convertirse en astronauta requiere de mucho esfuerzo y dedicación. Desde la formación académica hasta las pruebas físicas, deberás estar preparado para superar cada uno de los desafíos que se presenten en el camino.</p>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- END OF GROUP CARD -->
+
+                <!-- SHORT-MESSAGE-BLOCK -->
+                <p class="text-white text-center my-5 fw-bold border py-2 px-2" style="box-shadow:0px 4px 8px black; text-shadow: 2px 2px black;">
+                  Si te sientes motivado para ser parte de la historia de la exploración espacial, ¡adelante! ¡El espacio te espera!
+                </p>
+
+                <!-- ACCORDION -->
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+
+                  <!-- ITEM 1 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        1. ¿Qué requisitos se necesitan para ser astronauta?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                      <div class="accordion-body">
+                        Para convertirse en astronauta, se necesita una formación académica y experiencia en campos como la ingeniería, las ciencias físicas o biológicas, o la medicina. Además, se deben superar rigurosas pruebas físicas y de habilidades mentales. Cada agencia espacial tiene sus propios requisitos específicos.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ITEM 2 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed  bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        2. ¿Qué tan peligroso es ser astronauta?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        
+                        Ser astronauta implica riesgos, como exposición a la radiación, impactos de objetos espaciales, y problemas de salud debido a la gravedad cero. Sin embargo, las agencias espaciales trabajan constantemente para mejorar la seguridad de las misiones y garantizar el bienestar de los astronautas.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ITEM 3 -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed  bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        3. ¿Qué tipo de misiones realizan los astronautas?
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                      <div class="accordion-body">
+                        Los astronautas realizan una variedad de misiones, desde mantenimiento y reparación de satélites hasta investigaciones científicas en el espacio. También pueden participar en misiones de exploración, como la misión Artemis de la NASA, que busca llevar a la primera mujer y al próximo hombre a la Luna en 2024.
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- END OF ACCORDION -->
+
+                <br><br><br>
+
+              </div>
+              <!-- END CONTAINER -->
+              
+              <!-- CARRUSEL NEXT BUTTON: RETURN TO PRINCIPAL VIEW -->
+              <button class="carousel-control-next position-fixed" type="button" data-bs-target="#carouselMain" data-bs-slide="next" style="width: 7.5% !important;">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+
+          </div>
+          <!-- END OF ITEM 3: ASTRONAUT VIEW -->
+
+        </main>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
